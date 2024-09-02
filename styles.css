@@ -1,8 +1,18 @@
 body {
     margin: 0;
-    padding: 0;
     box-sizing: border-box;
     min-height: 100vh;
+    color: #FFFF;
+    background-color: #0a0a26;
+}
+
+:root{
+    font-size: 16px;
+}
+
+* {
+    font-family: 'Poppins', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    list-style-type: none;
 }
 
 .gridContainer{
@@ -13,16 +23,83 @@ body {
 }
 
 .nav{
-    grid-row: 1/6;
-    background-color: cornflowerblue;
+    grid-row: 2/6;
+    background-color: #0a0a26;
+}
+
+.navTools{
+    display: flex;  
+    flex-direction: column;
+    list-style-type: none;
+    gap: 10px;
+}
+
+ul > * {
+    padding: 5px;
+    background-color: #13132d;
+    border-radius: 10px;
+    padding: 22.5px;
+}
+
+ul > *:hover {
+    background-color: #232341;
+    cursor: grab;
+}
+
+.navLogo{
+
 }
 
 .header{
-    grid-row: 1/2;
-    background-color: white;
+    grid-column: 1 / 3;
+    background-color: #13132d;
+    border-radius: 10px;
 }
 
 .content{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
     grid-row: 2/6;
-    background-color: lightgray;
+    background-color: #0a0a26;
+    padding: 10px;
+    gap: 10px;
+}
+
+.content > div{
+    padding: 5px;
+}
+
+.content > div > div {
+    border-radius: 10px;
+    text-align: center;
+    background-color: #13132d;
+}
+
+.projectsContainer{
+    display: grid;
+    grid-row: span 4;
+    grid-template: 1fr 1fr 1fr/ 1fr 1fr;
+    grid-auto-rows: 1fr;
+    gap: 10px;
+}
+
+.project{
+}
+
+#graph{
+    grid-column: span 2;
+}
+
+.suggestedContainer{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-row: span 4;
+    gap: 10px;
+    padding-left: 20px;
+}
+
+.announcementsContainer{
+}
+
+.trendingContainer{
 }
